@@ -3,15 +3,15 @@ import './profile.scss';
 import moment from 'moment';
 
 const Profile = p => {
-   const birth = moment(p.user.birthDate).format('DD MMM YY');
+   const birth = moment(p.userData.birthDate).format('DD MMM YY');
 
    return (
       <div className="profile">
          <p className="profile__name">
-            {p.user.firstName} {p.user.lastName}
+            {p.userData.firstName} {p.userData.lastName}
          </p>
          <p className="profile__birth">
-            Was born {birth} in {p.user.birthPlace}
+            Was born {birth} in {p.userData.birthPlace}
          </p>
       </div>
    );

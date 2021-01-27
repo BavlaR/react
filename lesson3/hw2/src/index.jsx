@@ -9,4 +9,4 @@ const userData = {
    birthPlace: 'London',
 };
 
-ReactDOM.render(<Profile user={userData} />, document.querySelector('#root'));
+ReactDOM.render(<Profile userData={userData} />, document.querySelector('#root'));
