@@ -2,7 +2,7 @@ import React from 'react';
 import './profile.scss';
 import moment from 'moment';
 
-export default p => {
+const Profile = p => {
    const birth = moment(p.user.birthDate).format('DD MMM YY');
 
    return (
@@ -16,3 +16,5 @@ export default p => {
       </div>
    );
 };
+
+export default Profile;
