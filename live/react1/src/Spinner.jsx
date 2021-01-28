@@ -2,12 +2,12 @@ import React from 'react';
 
 // number
 // JSX
-export default p => (
+export default ({ size }) => (
    <span
-      class="spinner"
+      className="spinner"
       style={{
-         height: p.size,
-         width: p.size,
+         height: size,
+         width: size,
       }}
    ></span>
 );

@@ -5,3 +5,5 @@ export default p => (
       Login
    </button>
 );
+
+// REFACTOR

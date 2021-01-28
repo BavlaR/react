@@ -5,3 +5,5 @@ export default p => (
       Logout
    </button>
 );
+
+// REFACTOR
