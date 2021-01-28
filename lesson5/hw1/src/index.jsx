@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.scss";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.scss';
+import Toggler from './Toggler';
 
-const rootElement = document.querySelector("#root");
+const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Toggler />, rootElement);
