@@ -27,19 +27,19 @@ class ColorPicker extends Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            data-color="coral"
+            data-color="Coral"
             onMouseEnter={this.handleEnter}
             onMouseLeave={this.handleLeave}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            data-color="aqua"
+            data-color="Aqua"
             onMouseEnter={this.handleEnter}
             onMouseLeave={this.handleLeave}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            data-color="bisque"
+            data-color="Bisque"
             onMouseEnter={this.handleEnter}
             onMouseLeave={this.handleLeave}
           ></button>
