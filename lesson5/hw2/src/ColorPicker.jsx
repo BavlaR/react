@@ -3,14 +3,27 @@ import React, { Component } from 'react';
 class ColorPicker extends Component {
   constructor() {
     super();
+
     this.state = {
       text: '',
     };
   }
 
-  handleEnter = e => {
+  handleEnterCoral = e => {
     this.setState({
-      text: e.target.dataset.color,
+      text: 'Coral',
+    });
+  };
+
+  handleEnterAqua = e => {
+    this.setState({
+      text: 'Aqua',
+    });
+  };
+
+  handleEnterBisque = e => {
+    this.setState({
+      text: 'Bisque',
     });
   };
 
@@ -27,20 +40,17 @@ class ColorPicker extends Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            data-color="Coral"
-            onMouseEnter={this.handleEnter}
+            onMouseEnter={this.handleEnterCoral}
             onMouseLeave={this.handleLeave}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            data-color="Aqua"
-            onMouseEnter={this.handleEnter}
+            onMouseEnter={this.handleEnterAqua}
             onMouseLeave={this.handleLeave}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            data-color="Bisque"
-            onMouseEnter={this.handleEnter}
+            onMouseEnter={this.handleEnterBisque}
             onMouseLeave={this.handleLeave}
           ></button>
         </div>
