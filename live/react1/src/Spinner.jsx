@@ -1,7 +1,5 @@
 import React from 'react';
 
-// number
-// JSX
 export default ({ size }) => (
    <span
       className="spinner"

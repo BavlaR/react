@@ -1,9 +1,7 @@
 import React from 'react';
 
-export default p => (
-   <button className="logout btn" onClick={p.onLogout}>
+export default ({ onLogout }) => (
+   <button className="logout btn" onClick={onLogout}>
       Logout
    </button>
 );
-
-// REFACTOR

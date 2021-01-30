@@ -3,12 +3,6 @@ import Logout from './Logout';
 import Login from './Login';
 import Spinner from './Spinner';
 
-// algo
-// show login by default
-// show Spinner after Login click & hide Login
-// show Logout after 2 sec, hide spinner
-// show Login after click Logout
-
 class Auth extends Component {
    constructor() {
       super();
