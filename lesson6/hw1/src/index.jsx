@@ -3,4 +3,4 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import Status from './Status';
 
-ReactDOM.render(<Status />, document.querySelector('#root'));
+ReactDOM.render(<Status isOnline={false} />, document.querySelector('#root'));
