@@ -1,29 +1,13 @@
 import React, { Component } from 'react';
 
 class ColorPicker extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      text: '',
-    };
-  }
-
-  handleEnterCoral = e => {
-    this.setState({
-      text: 'Coral',
-    });
+  state = {
+    text: '',
   };
 
-  handleEnterAqua = e => {
+  handleEnter = color => {
     this.setState({
-      text: 'Aqua',
-    });
-  };
-
-  handleEnterBisque = e => {
-    this.setState({
-      text: 'Bisque',
+      text: color,
     });
   };
 
@@ -40,17 +24,17 @@ class ColorPicker extends Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            onMouseEnter={this.handleEnterCoral}
+            onMouseEnter={() => this.handleEnter('Coral')}
             onMouseLeave={this.handleLeave}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            onMouseEnter={this.handleEnterAqua}
+            onMouseEnter={() => this.handleEnter('Aqua')}
             onMouseLeave={this.handleLeave}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            onMouseEnter={this.handleEnterBisque}
+            onMouseEnter={() => this.handleEnter('Bisque')}
             onMouseLeave={this.handleLeave}
           ></button>
         </div>
