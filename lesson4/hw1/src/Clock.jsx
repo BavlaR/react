@@ -8,8 +8,6 @@ const getTimeWithOffset = offset => {
   return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
 };
 
-console.log(getTimeWithOffset(10));
-
 class Clock extends Component {
   constructor(p) {
     super(p);
