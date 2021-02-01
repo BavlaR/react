@@ -2,20 +2,22 @@ import React, { Component } from 'react';
 
 class ConnectionStatus extends Component {
    state = {
-      status: 'online',
+      status: 'Online',
    };
 
    handleOnline = () => {
-      document.querySelector('.status').classList.toggle('status_offline');
+      document.querySelector('.status').classList.remove('status_offline');
       this.setState({
-         status: 'online',
+         status: 'Online',
       });
    };
 
+   online = window.navigator.onLine;
+
    handleOffline = () => {
-      document.querySelector('.status').classList.toggle('status_offline');
+      document.querySelector('.status').classList.add('status_offline');
       this.setState({
-         status: 'offline',
+         status: 'Offline',
       });
    };
 
