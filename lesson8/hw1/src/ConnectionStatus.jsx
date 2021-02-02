@@ -15,7 +15,7 @@ class ConnectionStatus extends Component {
    handleOffline = () => {
       document.querySelector('.status').classList.toggle('status_offline');
       this.setState({
-         status: 'Offline',
+         status: 'offline',
       });
    };
 
