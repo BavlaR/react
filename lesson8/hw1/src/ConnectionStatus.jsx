@@ -6,18 +6,23 @@ class ConnectionStatus extends Component {
    };
 
    handleOnline = () => {
-      document.querySelector('.status').classList.toggle('status_offline');
+      // document.querySelector('.status').classList.toggle('status_offline');
       this.setState({
          status: 'online',
       });
    };
 
    handleOffline = () => {
-      document.querySelector('.status').classList.toggle('status_offline');
+      // document.querySelector('.status').classList.toggle('status_offline');
       this.setState({
          status: 'offline',
       });
    };
+
+   componentDidMount() {
+      window.addEventListener('online', this.handleOnline);
+      window.addEventListener('offline', this.handleOffline);
+   }
 
    componentWillUnmount() {
       window.removeEventListener('online', this.handleOnline);
@@ -25,10 +30,12 @@ class ConnectionStatus extends Component {
    }
 
    render() {
-      window.addEventListener('offline', this.handleOffline);
-      window.addEventListener('online', this.handleOnline);
-
-      return <div className="status">{this.state.status}</div>;
+      const { status } = this.state;
+      return status === 'online' ? (
+         <div className="status">{status}</div>
+      ) : (
+         <div className="status status_offline">{status}</div>
+      );
    }
 }
 
