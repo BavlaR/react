@@ -4,7 +4,7 @@ class UserForm extends Component {
    state = {
       name: '',
       student: '',
-      occupation: 'London',
+      occupation: '',
       about: '',
    };
 
@@ -15,11 +15,6 @@ class UserForm extends Component {
       this.setState({
          [name]: val,
       });
-   };
-
-   handleSubmit = e => {
-      e.preventDefault();
-      // console.log(this.state);
    };
 
    render() {
