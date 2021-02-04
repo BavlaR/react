@@ -16,14 +16,18 @@ class UsersList extends Component {
    render() {
       const { text } = this.state;
       const { users } = this.props;
-      const filteredUsers = users.filter(user => user.name === text);
+      const filteredUsers = users.filter(user => user.name.toUpperCase() === text.toUpperCase());
 
       return (
          <div>
-            <Filter onChange={this.handleChange} count={filteredUsers.length} filterText={text} />
+            <Filter
+               onChange={this.handleChange}
+               count={text ? filteredUsers.length : ''}
+               filterText={text}
+            />
 
             <ul className="users">
-               {(!text ? users : filteredUsers).map(user => (
+               {(text ? filteredUsers : users).map(user => (
                   <User name={user.name} age={user.age} key={user.id} />
                ))}
             </ul>
