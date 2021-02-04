@@ -6,14 +6,12 @@ class ConnectionStatus extends Component {
    };
 
    handleOnline = () => {
-      // document.querySelector('.status').classList.toggle('status_offline');
       this.setState({
          status: 'online',
       });
    };
 
    handleOffline = () => {
-      // document.querySelector('.status').classList.toggle('status_offline');
       this.setState({
          status: 'offline',
       });
@@ -31,11 +29,8 @@ class ConnectionStatus extends Component {
 
    render() {
       const { status } = this.state;
-      return status === 'online' ? (
-         <div className="status">{status}</div>
-      ) : (
-         <div className="status status_offline">{status}</div>
-      );
+      const className = `status ${status === 'offline' ? 'status_offline' : ''}`;
+      return <div className={className}>{status}</div>;
    }
 }
 
