@@ -9,7 +9,7 @@ class ProductsList extends Component {
          <div className="products">
             <ul className="products__list">
                {cartItems.map(item => (
-                  <li className="products__list-item">
+                  <li className="products__list-item" key={item.id}>
                      <span className="products__item-name">{item.name}</span>
                      <span className="products__item-price">${item.price}</span>
                   </li>
