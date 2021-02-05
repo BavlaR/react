@@ -5,16 +5,16 @@ const UserForm = ({ userData, handleChange }) => {
       <form className="user-form">
          <input
             type="text"
-            name="firstName"
+            name="lastName"
             className="user-form__input"
-            value={userData.firstName}
+            value={userData.lastName}
             onChange={handleChange}
          />
          <input
             type="text"
-            name="lastName"
+            name="firstName"
             className="user-form__input"
-            value={userData.lastName}
+            value={userData.firstName}
             onChange={handleChange}
          />
       </form>
