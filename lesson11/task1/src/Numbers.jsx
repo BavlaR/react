@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import propTypes from 'prop-types';
 
 class Numbers extends PureComponent {
    render() {
@@ -10,5 +11,10 @@ class Numbers extends PureComponent {
       );
    }
 }
+
+Numbers.propTypes = {
+   title: propTypes.string,
+   number: propTypes.number.isRequired,
+};
 
 export default Numbers;
