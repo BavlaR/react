@@ -17,11 +17,11 @@ const Task = ({ id, done, text, onChange, onDelete }) => {
 };
 
 Task.propTypes = {
-   id: PropTypes.number,
-   done: PropTypes.bool,
-   text: PropTypes.string,
-   onChange: PropTypes.func,
-   onDelete: PropTypes.func,
+   id: PropTypes.number.isRequired,
+   done: PropTypes.bool.isRequired,
+   text: PropTypes.string.isRequired,
+   onChange: PropTypes.func.isRequired,
+   onDelete: PropTypes.func.isRequired,
 };
 
 export default Task;
