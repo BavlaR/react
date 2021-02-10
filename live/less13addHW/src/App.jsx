@@ -5,14 +5,14 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 const App = () => {
    return (
-      <Router>
-         <div className="page">
+      <div className="page">
+         <Router>
             <ul className="navigation">
                <li className="navigation__item">
-                  <link to="/">Home</link>
+                  <Link to="/">Home</Link>
                </li>
                <li className="navigation__item">
-                  <link to="/users">Users</link>
+                  <Link to="/users">Users</Link>
                </li>
             </ul>
             <Switch>
@@ -21,8 +21,8 @@ const App = () => {
                   <Home />
                </Route>
             </Switch>
-         </div>
-      </Router>
+         </Router>
+      </div>
    );
 };
 

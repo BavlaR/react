@@ -4,15 +4,15 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 const Users = ({ match }) => {
    return (
-      <Router>
-         <div className="page__content">
+      <div className="page__content">
+         <Router>
             <h1>Users</h1>
             <ul className="navigation">
                <li className="navigation__item">
-                  <link to={`${match.path}/github`}>Github</link>
+                  <Link to={`${match.path}/github`}>Github</Link>
                </li>
                <li className="navigation__item">
-                  <link to={`${match.path}/facebook`}>Facebook</link>
+                  <Link to={`${match.path}/facebook`}>Facebook</Link>
                </li>
             </ul>
 
@@ -22,8 +22,8 @@ const Users = ({ match }) => {
                </Route>
                <Route path={`${match.path}/:userId`} component={User} />
             </Switch>
-         </div>
-      </Router>
+         </Router>
+      </div>
    );
 };
 

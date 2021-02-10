@@ -3,7 +3,6 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import './index.scss';
 import Home from './Home';
 import Products from './Products';
-import Product from './Product';
 
 const App = () => {
    return (
